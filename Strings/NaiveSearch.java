@@ -30,5 +30,49 @@ public class NaiveSearch {
 		String pat = "AABA";
 		search(txt, pat);
 	}
+
+    public static class PermutationOFString {
+
+
+            // Function to print permutations of the string
+            // This function takes two parameters:
+            // 1. String
+            // 2. Starting index of the string.
+            static void permute(StringBuilder s , int left , int right) {
+
+                // Base case
+                if (left == right) {
+                    System.out.println(s);
+                    return;
+                }
+
+                for (int i = left; i < right; i++) {
+
+                    // Swapping
+                    swap(s, left , i);
+
+                    // First idx+1 characters fixed
+                    permute(s, left +1, right);
+
+                    // Backtrack
+                    swap(s, left, i);
+                }
+            }
+
+
+            // Helper function to swap characters in the StringBuilder
+            static void swap(StringBuilder s, int i, int j) {
+                char temp = s.charAt(i);
+                s.setCharAt(i, s.charAt(j));
+                s.setCharAt(j, temp);
+            }
+
+            public static void main(String[] args) {
+                StringBuilder s =new StringBuilder( "1234");
+                int left =0;
+                int right=s.length();
+                permute(s,left,right);
+            }
+        }
 }
 

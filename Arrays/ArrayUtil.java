@@ -35,7 +35,7 @@ public class ArrayUtil {
         while (start < end) {
             int temp = numbers[start];
             numbers[start] = numbers[end];
-            numbers[end] = temp;
+             numbers[end] = temp;
             start++;
             end--;
         }

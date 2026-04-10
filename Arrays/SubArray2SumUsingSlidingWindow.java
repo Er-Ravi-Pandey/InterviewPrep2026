@@ -3,25 +3,25 @@ package com.DSA.Arrays;
 
 import java.util.Arrays;
 
-public class SubArray2SumUsingSlidingWindow {
+public class  SubArray2SumUsingSlidingWindow {
 
         static int [] subArray2Sum(int[] arr,int target ){
             Arrays.sort(arr);
-            int left=0;
-            int right = arr.length-1;
+            int i=0;
+            int j = arr.length-1;
             int result[]=new int[2];
-            while(left<right){
-                int sum=arr[left]+arr[right];
+            while(i<j){
+                int sum=arr[i]+arr[j];
                 if(sum==target){
-                  result[0]=arr[left];
-                  result[1]=arr[right];
+                  result[0]=arr[i];
+                  result[1]=arr[j];
                   return result;
                 }
                 else if(sum<target){
-                    left ++;
+                    i++;
                 }
                 else {
-                    right--;
+                    j--;
                 }
 
 

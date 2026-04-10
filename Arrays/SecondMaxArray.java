@@ -17,7 +17,7 @@ public class SecondMaxArray {
                 thirdMax=arr[i];
             }
         }
-        return thirdMax;
+        return secondMax;
     }
 
     public static void main(String[] args){

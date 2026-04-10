@@ -8,9 +8,10 @@ class ReverseString {
 	public static void main(String[] args)
 	{
 		String word = "Geeks For Geeks";
+		String reverse;
 		char[] temp = word.toCharArray();
-		int left, right = 0;
-		right = word.length() - 1;
+		int left;
+		int right = word.length() - 1;
 
 		for (left = 0; left < right; left++, right--) {
 			// Swap values of left and right
@@ -19,7 +20,9 @@ class ReverseString {
 			temp[right] = temp1;
 		}
         
-		
+
+
+
 		
 		for (char c : temp)
 			System.out.print(c);
