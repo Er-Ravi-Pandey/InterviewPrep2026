@@ -3,7 +3,7 @@ package com.DSA.Strings;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FirstNonRepeastingCharacter {
+public class FirstNonRepeatingCharacter {
     public static void main(String[] args) {
 
             firstNonRepeating("raviJIravi");

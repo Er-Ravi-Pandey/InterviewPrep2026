@@ -10,19 +10,19 @@ public class SeparateNumbersFromStrings {
             String input = "abc38gh89";
 
             // Regular expression to match numbers
-            String[] numbers = input.split("\\D+"); // Splits on non-digit characters
+            //String[] numbers = input.split("\\D+"); // Splits on non-digit characters
 
+            StringBuilder sb=new StringBuilder();
             // Collect numbers into a list (optional)
-            List<Integer> numberList = new ArrayList<>();
-            for (String num : numbers) {
-                if (!num.isEmpty()) { // Ignore empty strings resulting from splits
-                    numberList.add(Integer.parseInt(num));
+           // List<Integer> numberList = new ArrayList<>();
+            for (char c : input.toCharArray()) {
+                if (!Character.isDigit(c)) {
+                    sb.append(c);
                 }
             }
 
-            // Print results
-            System.out.println("Numbers: " + numberList ); // Outputs [38, 89]
-        }
+            System.out.println(sb.toString());
+            }
     }
 
 

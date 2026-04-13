@@ -32,7 +32,7 @@ public class SortCharacterBasisFrequency {
 
     public static void main(String[] args) {
         SortCharacterBasisFrequency sortCharacterBasisFrequency=new SortCharacterBasisFrequency();
-        System.out.println(sortCharacterBasisFrequency.frequencySort("aabbbnssii"));
+        System.out.println(sortCharacterBasisFrequency.frequencySort("cccaaa"));
     }
     }
 
