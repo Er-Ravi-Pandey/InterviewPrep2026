@@ -5,9 +5,9 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ConcurrentHashMapDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        HashMap<Integer, String> map = new HashMap<>();
+
 
 
 //        It’s a thread-safe version of HashMap introduced in Java 1.5.
@@ -59,23 +59,25 @@ public class ConcurrentHashMapDemo {
 
 
 
-         map.put(3,"Ravi");
-         map.put(9,"Vijay");
-         map.put(1,"Ajay");
+        ConcurrentHashMap<Integer, String> map = new ConcurrentHashMap<>();
 
+        Runnable task = () -> {
+            for (int i = 1; i <= 5; i++) {
+                map.put(i, Thread.currentThread().getName());
+            }
+        };
 
-        System.out.println(map.get(9));
+        Thread t1 = new Thread(task, "T1");
+        Thread t2 = new Thread(task, "T2");
 
-        map.putIfAbsent(9,"Sujay");
-        map.computeIfPresent(9,(k,v)-> v.toUpperCase());
+        t1.start();
+        t2.start();
+
+        t1.join();
+        t2.join();
 
         System.out.println(map);
-
-
-
-
-
-
     }
-
 }
+
+

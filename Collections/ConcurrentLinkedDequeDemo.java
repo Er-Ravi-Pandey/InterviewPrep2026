@@ -9,14 +9,38 @@ public class ConcurrentLinkedDequeDemo {
     public static void main(String[] args) {
 
 
-        ConcurrentLinkedDeque<Integer> deque = new ConcurrentLinkedDeque<>();//double ended queue// >
 
-        deque.addFirst(1);
-        deque.addLast(2);
-        deque.addFirst(3);
-        deque.addLast(4);
-        deque.addFirst(5);
 
-        System.out.println(deque);
-    }
-}
+
+
+                ConcurrentLinkedDeque<Integer> deque = new ConcurrentLinkedDeque<>();
+
+                deque.add(1);
+                deque.add(2);
+                deque.addFirst(0);
+
+                System.out.println(deque); // [0, 1, 2]
+
+                deque.pollLast();
+                System.out.println(deque); // [0, 1]
+            }
+        }
+
+
+
+        //🔹 When to use
+        //
+        //👉 Use when:
+        //
+        //Multiple threads need fast access
+        //No blocking required
+        //Need operations from both ends
+        //
+        //Example:
+        //
+        //Task scheduling
+        //Work-stealing algorithms
+
+
+        //ConcurrentLinkedDeque is a thread-safe, non-blocking double-ended queue
+        // that allows concurrent access without locks and supports insertion and removal from both ends.”

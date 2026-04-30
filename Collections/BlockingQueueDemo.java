@@ -1,114 +1,89 @@
 package com.DSA.Collections;
 
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
-import java.util.Comparator;
-import java.util.Deque;
-import java.util.concurrent.*;
-
-class Producer implements Runnable{
-
-    private BlockingQueue<Integer> queue;
-    private int value=0;
-    @Override
-    public void run() {
-        // TODO Auto-generated method stub
-        while(true){
-            try {
-                System.out.println("Producer produced "+value);
-                queue.put(value++);
-                Thread.sleep(1000);
-            } catch (Exception e) {
-                Thread.currentThread().interrupt();
-                System.out.println("Producer interrupted");
-            }
-        }
-
-    }
-    public Producer(BlockingQueue<Integer> queue){
-        this.queue=queue;
-    }
-
-
-
-}
-
-
-
-class Consumer implements Runnable{
-
-    private BlockingQueue<Integer> queue;
-
-    @Override
-    public void run() {
-        // TODO Auto-generated method stub
-        while(true){
-            try {
-                Integer value=queue.take();
-                System.out.println("Consumer consumed "+value);
-
-                Thread.sleep(2000);
-            } catch (Exception e) {
-                Thread.currentThread().interrupt();
-                System.out.println("Consumer interrupted");
-            }
-        }
-
-    }
-    public Consumer(BlockingQueue<Integer> queue){
-        this.queue=queue;
-    }
-
-
-
-}
 public class BlockingQueueDemo {
 
-    public static void main(String[] args) {
-
-        //thread safe queue
-        //wait for queue to become non empty before adding element
-        //simplify concurrency problems like producer- consumer
-        //standard queue -- > immediately
-
-        //BlockingQueue
-        //put --> Blocks if the queue is full until space becomes available
-        //take --> Blocks if the queue is empty until an element becomes available
-        //offer -->   Waits for space to become available if the queue is full, otherwise adds the element and returns true. If the queue is full, returns false.
+        //When we want to access queue without blocking them
+        //non blocking thread safe queue
+        //An implementation of the queue interface that supports lock-free, thread safe operations.
 
 
-        BlockingQueue<Integer> queue = new java.util.concurrent.ArrayBlockingQueue<>(5);//size of queue
-        //a bounded backing queue, backed by an circular array
-        //low memory overhead
-        //uses a single lock for put and take
+        //🔹 What is a BlockingQueue?
+        //
+        //👉 A thread-safe queue where:
+        //
+        //If queue is empty → consumer waits
+        //If queue is full → producer waits
+        //
+        //👉 No manual wait/notify needed
 
-        Thread producer = new Thread(new Producer(queue));
-        Thread consumer = new Thread(new Consumer(queue));
+        //👉 BlockingQueue automatically handles coordination between threads
 
-        producer.start();
-        consumer.start();
-
-
-        BlockingQueue<Integer> queue5 = new LinkedBlockingQueue<>(5);//size of queue();
-        //optianally bounded backed by linkedList
-        //uses two separate locks for put and take
-        //higher throughput than ArrayBlockingQueue
-
-
-        BlockingQueue<String> queue2 = new PriorityBlockingQueue<>(5, Comparator.reverseOrder());//size of queue();
-        //unbounded backed by priority queue
-        //Binary heap is used internally
-        //head is based on their natural ordering
-
-        queue2.add("Ravi");
-        queue2.add("Saurabh");
-        queue2.add("Rohit");
-
-        System.out.println(queue2);
+        //🔹 Why do we need it?
+        //
+        //Without BlockingQueue:
+        //
+        //You’d have to write:
+        //synchronized
+        //wait()
+        //notify()
+        //
+        //👉 Complex + error-prone
 
 
 
+        //With BlockingQueue:
+        //
+        //👉 Java handles everything internally
+
+
+
+       //🔹 When to use
+    //
+    //👉 Use when:
+    //
+    //Producer-consumer pattern
+    //Task queue (very common in microservices)
+    //Thread pool internals
+
+
+    /*BlockingQueue is a thread-safe queue that supports blocking operations like put and take,
+    allowing threads to wait automatically when the queue is full or empty.
+    It is commonly used in producer-consumer scenarios*/
+        public static void main(String[] args) {
+
+            BlockingQueue<Integer> queue = new LinkedBlockingQueue<>(2);
+
+            // Producer
+            new Thread(() -> {
+                try {
+                    queue.put(1);
+                    System.out.println("Produced 1");
+
+                    queue.put(2);
+                    System.out.println("Produced 2");
+
+                    queue.put(3); // waits (queue full)
+                    System.out.println("Produced 3");
+
+                } catch (Exception e) {}
+            }).start();
+
+            // Consumer
+            new Thread(() -> {
+                try {
+                    Thread.sleep(1000);
+
+                    System.out.println("Consumed " + queue.take());
+                    System.out.println("Consumed " + queue.take());
+
+                } catch (Exception e) {}
+            }).start();
+        }
     }
 
 
 
-}
+

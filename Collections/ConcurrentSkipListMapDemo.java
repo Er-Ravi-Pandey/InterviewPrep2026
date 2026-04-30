@@ -1,7 +1,28 @@
 package com.DSA.Collections;
 
+import java.util.concurrent.ConcurrentSkipListMap;
+
 public class ConcurrentSkipListMapDemo {
     public static void main(String[] args) {
+
+
+
+
+
+        //“ConcurrentSkipListMap is a thread-safe sorted map implementation based on skip list data structure.
+        // It allows concurrent access while maintaining natural ordering of keys.”
+
+        //👉 In Java, you’ll see:
+        //
+        //ConcurrentSkipListMap
+        //ConcurrentSkipListSet
+
+
+        //🔹 Why not just use ConcurrentHashMap?
+        //ConcurrentHashMap → fast, but NO ordering
+        //ConcurrentSkipListMap → maintains sorted order
+        //
+        //👉 It is a thread-safe + sorted collection
         //it is a concurrent version of TreeMap
         //helps in getting sorted map in multi-threaded environment
         //it holds data in skip list data structure
@@ -18,5 +39,16 @@ public class ConcurrentSkipListMapDemo {
 
         //with this approach , we can get better performance in multi-threaded environment
 
+
+
+            ConcurrentSkipListMap<Integer, String> map = new ConcurrentSkipListMap<>();
+
+            map.put(3, "Ravi");
+            map.put(1, "Ajay");
+            map.put(2, "Vijay");
+
+            System.out.println(map);
+        }
+
     }
-}
+

@@ -38,4 +38,15 @@ public class ConcurrenHashMapThread {
         writer.start();
         reader.start();
     }
+//“ConcurrentHashMap provides thread-safe operations with better performance
+// than synchronizedMap by allowing concurrent access using fine-grained locking and non-blocking reads.”
+    //🔹 Key features (interview important)
+    //✅ Thread-safe
+    //
+    //No manual synchronization needed
+    //
+    //✅ Concurrent reads
+    //Reads do NOT block
+    //✅ Partial locking
+    //Only affected part is locked
 }
