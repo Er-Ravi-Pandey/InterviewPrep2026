@@ -1,0 +1,59 @@
+🔹 Must-Know Design Patterns (High ROI)
+🟢 Tier 1 (You MUST know these clearly)
+1. Singleton
+Very common
+Thread-safe version (important)
+
+👉 Where used:
+
+Config, Logger, Cache
+
+2. Factory Pattern
+Most asked in interviews
+
+👉 You should know:
+
+Simple factory
+Why it’s better than new
+
+3. Builder Pattern
+You just studied this 👍
+
+👉 Must explain:
+
+Why constructor fails
+Method chaining
+
+4. Strategy Pattern
+
+🔥 VERY IMPORTANT
+
+👉 Core idea:
+
+Replace if-else with interchangeable logic
+
+Example:
+
+Payment methods (UPI, Card, Netbanking)
+🟡 Tier 2 (Good to know)
+
+5. Observer Pattern
+
+👉 Used in:
+
+Event systems
+Pub-sub (Kafka, etc.)
+
+6. Decorator Pattern
+
+👉 Add behavior dynamically
+
+Example:
+
+Logging, security layers
+
+7. Prototype
+
+👉 You already did
+
+Just know cloning + use case

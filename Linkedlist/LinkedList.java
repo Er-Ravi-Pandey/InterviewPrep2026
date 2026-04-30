@@ -36,7 +36,7 @@ public class LinkedList {
         while(temp!=null){
 
             if(temp.data == value)
-                return 1;
+                return 7;
 
             temp=temp.next;
             }
@@ -71,7 +71,7 @@ public class LinkedList {
         int cnt=0;
         Node temp=head;
         Node prev=null;
-        while(temp!=null){
+        while(temp.next!=null){
             cnt++;
             if(cnt==k){
                 //this will link with the next node by skipping the matched node
@@ -94,7 +94,7 @@ public class LinkedList {
 
         Node temp=head;
         Node prev=null;
-        while(temp!=null){
+        while(temp.next!=null){
             if(temp.data==val){
                 //this will link with the next node by skipping the matched node
                 prev.next=prev.next.next;
@@ -230,6 +230,8 @@ public class LinkedList {
         System.out.println("Insert at before some value of LinkedList ");
         head=insertTail(head,19);
         print(head);
+
+
     }
 
 }
