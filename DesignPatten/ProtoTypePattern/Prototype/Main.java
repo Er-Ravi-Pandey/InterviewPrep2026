@@ -1,7 +1,6 @@
-package com.DSA.DesignPatten.ProtoTypePattern;
+package com.DSA.DesignPatten.ProtoTypePattern.Prototype;
 
 
-import javax.crypto.spec.PSource;
 //👉 Instead of creating object from scratch, you clone an existing object
 
 //🔹 Why do we need it?

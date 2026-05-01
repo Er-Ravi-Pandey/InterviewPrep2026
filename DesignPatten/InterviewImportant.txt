@@ -1,5 +1,5 @@
-🔹 Must-Know Design Patterns (High ROI)
-🟢 Tier 1 (You MUST know these clearly)
+
+
 1. Singleton
 Very common
 Thread-safe version (important)

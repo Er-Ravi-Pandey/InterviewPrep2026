@@ -1,0 +1,108 @@
+
+
+
+
+ Basics (Foundation)
+
+👉 Goal: Understand what’s happening
+
+Thread vs Process
+How to create threads:
+Thread class
+Runnable
+Thread lifecycle
+
+👉 Practice:
+
+Create 2 threads and print names
+
+
+ Core Problems (VERY IMPORTANT)
+
+👉 This is where interviews focus
+
+Race condition
+Synchronization (synchronized)
+Why we need it
+
+👉 Practice:
+
+Counter increment problem (wrong → fix with sync)
+
+Locks & Advanced Control
+
+👉 Move beyond basic sync
+
+synchronized block vs method
+ReentrantLock
+Deadlock (must understand concept)
+
+👉 Practice:
+
+Simple lock example
+Deadlock scenario (basic)
+
+Communication between threads
+
+👉 Important concept
+
+wait(), notify(), notifyAll()
+Producer-Consumer problem
+
+👉 Link it with:
+
+BlockingQueue (you already know 👍)
+
+ Modern Java Concurrency
+
+👉 High interview value
+
+ExecutorService
+Thread pools
+Callable vs Runnable
+Future
+
+👉 Practice:
+
+Submit tasks using thread pool
+
+ Advanced + Revision
+
+👉 Make it interview-ready
+
+volatile keyword
+Happens-before concept (basic understanding)
+Revisit:
+ConcurrentHashMap
+BlockingQueue
+
+
+//Optimised Study Plan -
+🔹 Optimized Plan (4 Days – 3 hrs/day)
+🟢 Day 1: Foundation + Thread creation
+Thread vs Process
+Runnable vs Thread
+Thread lifecycle
+Basic program (2 threads)
+
+👉 Goal: Comfort with basics
+
+🟢 Day 2: Core (MOST IMPORTANT DAY)
+Race condition
+synchronized (method + block)
+How locking works
+
+👉 Practice:
+
+Counter problem (must do)
+🟢 Day 3: Advanced concurrency
+ReentrantLock
+Deadlock (concept + example)
+volatile (basic understanding)
+🟢 Day 4: High-level (VERY IMPORTANT for interviews)
+ExecutorService
+Thread pool
+Callable & Future
+Quick revision:
+BlockingQueue
+ConcurrentHashMap

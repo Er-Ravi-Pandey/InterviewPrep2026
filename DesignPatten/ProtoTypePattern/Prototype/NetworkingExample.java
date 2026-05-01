@@ -1,4 +1,4 @@
-package com.DSA.DesignPatten.ProtoTypePattern;
+package com.DSA.DesignPatten.ProtoTypePattern.Prototype;
 
 public class NetworkingExample implements Cloneable {
 
