@@ -3,6 +3,7 @@ package com.DSA.Multithreading;
 import com.sun.jdi.PathSearchingVirtualMachine;
 
 //Atomic classes are thread-safe
+//To perform thread-safe operations without locks
 public class AtomicClassesExample {
     //private  int count = 0;
 

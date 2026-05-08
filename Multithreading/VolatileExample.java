@@ -3,6 +3,9 @@ package com.DSA.Multithreading;
 
 class SharedObjetc {
 
+
+    //Threads can have their own local cached copy of variables instead of always reading directly from main memory.
+
     //In multithreading variable stored in thread cache memory to improve the performance  since here flag is set false so it remains
     //false for printIfFlagTrue
 
@@ -11,6 +14,12 @@ class SharedObjetc {
     private volatile boolean flag = false;
     //after making it volatile it is stored in main memory
     //volatile only uses to make state visible
+
+
+
+
+    //“In Java, each thread may maintain its own working memory or cached copy of shared variables for performance reasons.
+    // This can lead to visibility issues unless synchronization or volatile is used.”
 
     public void setFlagTrue(boolean flag) {
         System.out.println("Writer thread is setting flag true now");

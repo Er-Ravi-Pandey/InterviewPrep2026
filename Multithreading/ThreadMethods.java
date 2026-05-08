@@ -19,7 +19,7 @@ public class ThreadMethods extends Thread{
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-            System.out.println(Thread.currentThread().getName()+ "priority: "+Thread.currentThread().getPriority() + "count"+ i);
+            System.out.println(Thread.currentThread().getName()+Thread.currentThread().getPriority() + "count"+ i);
 
         }}
 
@@ -33,6 +33,12 @@ public class ThreadMethods extends Thread{
         thread2.setPriority(Thread.MAX_PRIORITY);
         thread.start();
         Thread.yield(); // to give hint/chance to JVM for other thread to execute other thread to execute
+        try {
+            thread1.interrupt();// to stop the thread execution
+
+        } catch (Exception e) {
+            throw new InterruptedException();
+        }
         //thread1.interrupt();// to stop the thread execution
         thread1.start();
         thread2.start();

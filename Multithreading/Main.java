@@ -11,7 +11,7 @@ public class Main {
 
     //Mulithreading in Java
 
-    /*, multithreading is the concurrent execution of multiple threads to maximize
+    /* Multithreading is the concurrent execution of multiple threads to maximize
     * the utilization of CPU. Java's multithreading is provided by the java.lang package
     *
     * JVM runs multiple threads
