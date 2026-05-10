@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 public class ExecutorFramework {
     //Executor Framework is a framework that provides a way to execute tasks asynchronously in a thread pool.
     //It was introduced in Java 1.5 and is part of the java.util.concurrent package.
-    //To simplify the developemnt of concurrent application by abstracting away the low level details of thread management
+    //To simplify the development of concurrent application by abstracting away the low level details of thread management.
 
     /*Manual thread management problems
     //Resource management
@@ -23,7 +23,7 @@ public class ExecutorFramework {
 
 
 
-    //below sumit method has runnable interface as parameter and also callable interface as return type
+    //below submit method has runnable interface as parameter and also callable interface as return type
     public static void main(String[] args) throws InterruptedException {
         long startTime = System.currentTimeMillis();
         ExecutorService executor = Executors.newFixedThreadPool(9);
