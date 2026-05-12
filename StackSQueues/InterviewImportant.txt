@@ -1,0 +1,61 @@
+🟡 Pattern 1: Balanced Parentheses
+
+Classic stack thinking.
+
+Learn:
+
+opening bracket push
+closing bracket match/pop
+
+🟡 Pattern 2: Monotonic Stack
+
+VERY important.
+
+Covers:
+
+Next Greater Element
+Next Smaller Element
+Stock Span
+Histogram problems
+
+This pattern appears a LOT.
+
+🟡 Pattern 3: Expression Conversion
+Infix → Postfix
+Infix → Prefix
+
+Good for stack fundamentals.
+
+🟡 Pattern 4: Min Stack
+
+Important interview favorite.
+
+🟡 Pattern 5: Stack + Queue hybrid problems
+
+Like:
+
+Queue using Stack
+Stack using Queue
+
+
+
+Phase 1 — Fundamentals
+
+Implementations
+Parentheses
+Min Stack
+
+Phase 2 — Pattern Recognition
+Next Greater
+Stock Span
+Infix/Postfix
+
+Phase 3 — Practical Medium Problems
+LRU
+Rotten Oranges
+First non-repeating char
+
+Phase 4 — Optional Hard
+Only if time/energy remains:
+Longest Valid Parentheses
+Next Greater 2
