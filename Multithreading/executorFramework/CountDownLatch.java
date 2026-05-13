@@ -39,6 +39,7 @@ System.out.println("All workers done!");
 
 
 Here, await() blocks until all workers finish.
+
 This is about coordination, not scheduling.
 
 
@@ -84,7 +85,7 @@ class DependentService implements Callable<String> {
             latch.countDown();
         }
 
-        latch.countDown();
+
 
         return "ok";
     }

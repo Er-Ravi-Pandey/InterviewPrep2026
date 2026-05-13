@@ -30,3 +30,21 @@ Callable & Future
 Quick revision:
 BlockingQueue
 ConcurrentHashMap
+
+
+For multithreading, the most interview-relevant topics for you now are probably:
+
+Thread lifecycle
+synchronized
+race condition
+deadlock
+Executor Framework
+Callable vs Runnable
+Future & CompletableFuture
+Thread pools
+volatile
+ReentrantLock
+Producer Consumer
+ConcurrentHashMap
+daemon thread
+schedulers
