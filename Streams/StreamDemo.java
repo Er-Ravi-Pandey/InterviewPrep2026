@@ -13,7 +13,7 @@ public class StreamDemo {
 
 
         //what is stream ?
-        //a sequence of operation which supports declarative and functional programming
+        //a sequence of operation which supports declarative and functional programming.
 
         //How to use Streams?
         //Source , intermediate operations & terminal operation

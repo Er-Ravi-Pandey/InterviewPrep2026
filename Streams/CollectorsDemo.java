@@ -33,11 +33,12 @@ public class CollectorsDemo {
         IntSummaryStatistics stats = list2.stream().collect(Collectors.summarizingInt(x ->x));
         System.out.println("count" + stats.getCount() + "sum" + stats.getSum() + "min" + stats.getMin() + "average" + stats.getAverage() + "max" + stats.getMax());
 
+
         //6.Averaging
         double average = list2.stream().collect(Collectors.averagingInt(x -> x));
         System.out.println(average);
 
-        //7.Counts
+        //7.Counts  super IMPORTANT
         Map<Integer,Long> collect2 = list2.stream().collect(Collectors.groupingBy(x -> x, Collectors.counting()));
         System.out.println(collect2);
 

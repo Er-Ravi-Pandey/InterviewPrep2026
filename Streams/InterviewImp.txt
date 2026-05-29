@@ -1,0 +1,132 @@
+1. Functional Interfaces
+
+Must know:
+
+Predicate
+Function
+Consumer
+Supplier
+
+And:
+
+@FunctionalInterface
+2. Lambda Expressions
+
+Understand:
+
+why lambdas were introduced
+
+to reduce boilerplate anonymous class code.
+
+3. Stream Lifecycle
+
+VERY IMPORTANT.
+
+Source → Intermediate → Terminal
+4. Intermediate Operations
+
+Must know:
+
+filter
+map
+flatMap
+distinct
+sorted
+limit
+5. Terminal Operations
+
+Must know:
+
+collect
+forEach
+reduce
+count
+findFirst
+anyMatch
+6. map vs flatMap
+
+VERY commonly asked.
+
+This is interview favorite.
+
+7. Collectors
+
+Most important:
+
+Collectors.toList()
+Collectors.groupingBy()
+Collectors.mapping()
+Collectors.partitioningBy()
+8. Optional
+
+Must know:
+
+Optional.of()
+ofNullable()
+orElse()
+orElseGet()
+
+Interviewers LOVE:
+
+orElse vs orElseGet
+9. Parallel Stream
+
+Basic understanding enough:
+
+parallelStream()
+
+Know:
+
+multithreading internally,
+uses ForkJoinPool.
+🔥 MOST ASKED Coding Questions
+
+Practice these repeatedly:
+
+sort employees by salary
+second highest salary
+group employees by department
+count frequency of chars
+remove duplicates
+first non-repeating char
+flatten nested lists
+even/odd partitioning
+max/min salary
+convert list to map
+🔥 SUPER IMPORTANT Interview Understanding
+
+Streams:
+
+do not modify original collection
+
+unless explicitly changed.
+
+🔥 Common Interview Question
+“Difference between Collection and Stream?”
+Collection	Stream
+stores data	processes data
+eager	lazy
+mutable	functional style
+🔥 Another Important Question
+“Why Streams?”
+
+Answer:
+
+to perform declarative, concise, functional-style data processing
+🔥 Most Important Concept Today
+
+If you deeply understand:
+
+filter + map + collect
+
+half of Java 8 interview coding becomes easy.
+
+🔥 Suggested Flow Today
+Lambda
+Functional interfaces
+Stream basics
+filter/map
+sorting
+groupingBy
+Optional
+Coding questions
