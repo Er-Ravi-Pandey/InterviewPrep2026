@@ -1,0 +1,67 @@
+Must Do (Very Frequently Asked)
+
+Preorder Traversal
+Inorder Traversal
+Postorder Traversal
+Level Order Traversal ⭐
+Height / Max Depth ⭐
+Check Balanced Binary Tree ⭐
+Check Identical Trees ⭐
+Diameter of Binary Tree ⭐
+
+If you finish only these, you'll already cover most tree questions asked in service companies.
+
+
+Left View
+Right View
+Zig-Zag Traversal
+Vertical Order Traversal
+
+1. Lowest Common Ancestor (LCA) ⭐⭐⭐
+
+Very popular.
+
+        3
+      /   \
+     5     1
+    / \   / \
+   6   2 0   8
+
+LCA(6,2) = 5
+
+2. Symmetric Tree ⭐⭐
+      1
+    /   \
+   2     2
+  / \   / \
+ 3  4  4  3
+
+Check mirror image.
+
+Session 1
+Preorder Recursive
+Inorder Recursive
+Postorder Recursive
+Level Order
+
+Session 2
+Iterative Preorder
+Iterative Inorder
+Iterative Postorder
+
+Session 3
+Height
+Balanced Tree
+Diameter
+Identical Tree
+
+Session 4
+Left View
+Right View
+Zig-Zag
+
+Session 5
+Top View
+Bottom View
+Vertical Traversal
+Boundary Traversal
