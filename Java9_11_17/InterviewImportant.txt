@@ -1,0 +1,266 @@
+Java 9 Topics (High Priority)
+1. Module System (JPMS)
+
+Most frequently asked Java 9 topic.
+
+Concept:
+
+Before Java 9:
+
+jar -> classpath
+
+After Java 9:
+
+module -> requires -> exports
+
+Example:
+
+module com.bank.payment {
+    requires java.sql;
+    exports com.bank.service;
+}
+
+Interview Question:
+
+Why was the Module System introduced?
+
+Answer:
+
+Better encapsulation
+Faster startup
+Smaller runtime images
+Dependency management
+2. Factory Methods for Collections
+
+Java 8:
+
+List<String> list = Arrays.asList("A","B");
+
+Java 9:
+
+List<String> list = List.of("A","B");
+
+Similarly:
+
+Set.of()
+Map.of()
+
+Questions:
+
+Is List.of mutable?
+
+Answer:
+
+No. Immutable collection.
+
+3. Optional Enhancements
+
+Java 8:
+
+Optional<String> name;
+
+Java 9 added:
+
+ifPresentOrElse()
+or()
+stream()
+
+Example:
+
+optional.ifPresentOrElse(
+    System.out::println,
+    () -> System.out.println("No Value")
+);
+4. Stream API Enhancements
+
+Java 9:
+
+takeWhile()
+dropWhile()
+ofNullable()
+
+Example:
+
+list.stream()
+    .takeWhile(x -> x < 5)
+
+Common interview question.
+
+Java 10 (Quick Read)
+
+Mostly one feature.
+
+var Keyword
+var name = "Ravi";
+
+Compiler infers type.
+
+Question:
+
+Is Java dynamically typed now?
+
+Answer:
+
+No.
+
+Still statically typed.
+
+Java 11 Topics (Very Important)
+
+Java 11 is LTS.
+
+Interviewers ask frequently.
+
+1. String API Enhancements
+isBlank()
+"   ".isBlank()
+lines()
+text.lines()
+
+Returns Stream<String>
+
+repeat()
+"Java".repeat(3)
+
+Output:
+
+JavaJavaJava
+strip()
+str.strip()
+
+Unicode aware trim.
+
+Question:
+
+Difference between trim() and strip()?
+
+2. Files Utility Methods
+
+Read file:
+
+String content =
+Files.readString(path);
+
+Write file:
+
+Files.writeString(path, content);
+
+Common interview question.
+
+3. Predicate.not()
+
+Before:
+
+list.stream()
+    .filter(s -> !s.isEmpty())
+
+Java 11:
+
+list.stream()
+    .filter(Predicate.not(String::isEmpty))
+4. HTTP Client API
+
+Big Java 11 feature.
+
+Before:
+
+HttpURLConnection
+
+Java 11:
+
+HttpClient
+
+Example:
+
+HttpClient client =
+    HttpClient.newHttpClient();
+
+Send request:
+
+HttpRequest request =
+    HttpRequest.newBuilder()
+        .uri(URI.create(url))
+        .build();
+
+Interview Question:
+
+What replaced HttpURLConnection?
+
+Answer:
+
+Java 11 HttpClient.
+
+5. Lambda Local Variables
+(var x, var y) -> x + y
+
+Rare but easy.
+
+Java 17 (Since Resume Mentions It)
+
+At least know these.
+
+Records
+public record Employee(
+    int id,
+    String name
+){}
+
+Automatically creates:
+
+constructor
+getters
+equals
+hashCode
+toString
+
+Asked frequently.
+
+Sealed Classes
+public sealed class Vehicle
+    permits Car, Bike
+{
+}
+
+Restricts inheritance.
+
+Switch Expressions
+String result =
+switch(day) {
+    case MONDAY -> "Start";
+    default -> "Other";
+};
+
+Very common.
+
+Must Prepare Questions
+
+If I were interviewing you, I would ask:
+
+Difference between Java 8 and Java 11?
+What is JPMS?
+What new Stream features came in Java 9?
+What new String methods came in Java 11?
+What is var?
+What is Java 11 HttpClient?
+Difference between trim() and strip()?
+What are Records?
+What are Sealed Classes?
+Why should an organization upgrade from Java 8 to Java 11?
+80/20 Preparation Plan
+
+Spend time in this order:
+
+Must Know
+Module System
+List.of / Set.of / Map.of
+Optional enhancements
+Stream enhancements
+String enhancements
+HttpClient
+Good to Know
+var
+Predicate.not
+Quick Read
+Records
+Sealed Classes
+Switch Expressions

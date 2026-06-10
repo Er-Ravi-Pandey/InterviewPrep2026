@@ -183,6 +183,9 @@ ELK basics:
 Elasticsearch
 Logstash
 Kibana
+
+
+
 🔥 4. Messaging Systems
 
 Very frequently discussed.
@@ -204,6 +207,7 @@ Basic understanding enough.
 
 Event-driven Architecture
 
+
 Important modern backend topic.
 
 🔥 5. Database Design
@@ -218,9 +222,12 @@ Normalization vs Denormalization
 ACID Properties
 Transactions
 Optimistic vs Pessimistic Locking
-🔥 6. High-Level Architecture Concepts
-Rate Limiting
 
+
+🔥 6. High-Level Architecture Concepts
+
+
+Rate Limiting
 Examples:
 
 token bucket
@@ -236,6 +243,8 @@ Basics of:
 
 OAuth
 JWT
+
+
 🔥 7. Concurrency & Performance
 
 Since you’re learning multithreading, these connect well.
@@ -249,6 +258,7 @@ Producer Consumer
 Connection Pooling
 
 DB connection pools.
+
 
 🔥 8. Cloud & Deployment Basics
 
@@ -295,6 +305,7 @@ scalability basics
 API gateway
 circuit breaker
 async processing
+
 🔥 Important Interview Reality
 
 For many service-based interviews:

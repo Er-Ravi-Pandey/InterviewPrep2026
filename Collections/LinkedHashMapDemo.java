@@ -17,6 +17,7 @@ public class LinkedHashMapDemo {
 
 
 
+
         map.put("Apple", 10);
         map.put("Banana", 20);
         map.put("Cherry", 30);
