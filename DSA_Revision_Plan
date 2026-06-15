@@ -1,0 +1,216 @@
+Day 1 – Arrays (Basics)
+Array Reverse
+Missing Number
+Move Zeros to End
+Second Max & Third Max
+Check Sorted Array
+Left Rotate by 1
+Left Rotate by D
+Remove Duplicates from Array
+Merge 2 Sorted Arrays
+
+Focus: Two pointers, basic traversal.
+
+Day 2 – Arrays (Medium)
+Sort 0s,1s,2s
+Square of Sorted Array
+Union of 2 Sorted Arrays
+Intersection of 2 Sorted Arrays
+Kadane's Algorithm
+Stock Buy & Sell
+Leaders in Array
+Rearrange Positive & Negative
+Rearrange Min & Max
+
+Focus: Pattern recognition.
+
+Day 3 – Arrays (Interview Favorites)
+Two Sum
+Three Sum
+Next Permutation
+Longest Consecutive Subsequence
+Set Matrix Zero
+Rotate Matrix by 90°
+Transpose Matrix
+Spiral Matrix
+
+Focus: Questions most likely to be asked.
+
+Day 4 – Strings (Basics)
+Reverse Word
+Palindrome String
+Remove Vowels
+Is Subsequence
+Check Rotated by Two Places
+Roman to Integer
+Anagram
+Remove Duplicates from String
+Convert String to Integer
+
+Day 5 – Strings (Advanced)
+Implement StrStr
+Longest Common Prefix
+First Non-Repeating Character
+Sort Characters by Frequency
+Longest Substring Without Repeating Character
+Longest Palindrome Sequence
+Minimum Insertion for Palindrome
+Permutation of String
+Recursively Remove Adjacent Characters
+
+Focus: Sliding window + HashMap.
+
+Day 6 – Collections + LinkedList Basics
+Collections Theory
+ArrayList
+LinkedList
+HashSet
+LinkedHashSet
+TreeSet
+HashMap
+Queue
+Deque
+PriorityQueue
+LinkedList
+Insert Node
+Delete Node
+Middle Element
+Reverse LinkedList
+Rotate LinkedList
+Nth Node from End
+
+Focus: Explain internals verbally.
+
+Day 7 – LinkedList Advanced
+Detect Loop
+Remove Loop
+Palindrome LinkedList
+Odd Even LinkedList
+Intersection Point
+Y Shaped LinkedList
+Merge Sorted LinkedList
+Add 2 Numbers
+Swap Pairs
+Sort LinkedList
+
+Focus: Slow-Fast Pointer.
+
+Day 8 – LinkedList Hard + Stack Basics
+LinkedList Hard
+Reverse K Group
+Flatten LinkedList
+Sort 0s,1s,2s by Links
+Stack
+Stack using Array
+Stack using LinkedList
+Queue using Array
+Queue using LinkedList
+Valid Parentheses
+Min Stack
+
+
+Day 9 – Stack & Queue Advanced
+Stack using Queue
+Queue using Stack
+Infix to Postfix
+Infix to Prefix
+Next Greater Element
+Next Smaller Element
+Circular Tour / Gas Station
+First Non-Repeating Character in Stream
+
+Focus: Monotonic Stack.
+
+Day 10 – Hard Questions + Trees
+Hard Questions
+Largest Rectangle Histogram
+Trapping Rainwater
+Daily Temperature
+LRU Cache
+Trees
+Recursive Preorder
+Recursive Inorder
+Recursive Postorder
+Level Order Traversal
+Iterative Preorder
+Iterative Inorder
+Iterative Postorder
+
+Focus: Most important interview questions.
+
+Questions to Revise Every Alternate Day (Top 15)
+
+These are your "must remember" questions:
+
+Two Sum
+Kadane
+Next Permutation
+Set Matrix Zero
+Longest Substring Without Repeating Character
+Reverse LinkedList
+Detect Loop
+Merge Sorted LinkedList
+Reverse K Group
+Next Greater Element
+Largest Rectangle Histogram
+Trapping Rainwater
+Daily Temperature
+LRU Cache
+Level Order Traversal
+
+
+
+
+Interview Must do -
+
+
+Must-Revise Java Questions
+
+These are asked repeatedly:
+
+Why String is immutable?
+Difference between ArrayList and LinkedList?
+HashMap internal working?
+HashMap vs ConcurrentHashMap?
+HashSet internal working?
+fail-fast vs fail-safe iterator?
+Comparable vs Comparator?
+== vs equals()?
+final, finally, finalize()?
+Method overloading vs overriding?
+Checked vs unchecked exceptions?
+Runnable vs Callable?
+synchronized vs Lock?
+Stream vs Parallel Stream?
+Optional class?
+Must-Revise Spring Boot Questions
+How Dependency Injection works?
+Bean scopes?
+@Component vs @Service vs @Repository?
+@Autowired vs Constructor Injection?
+How Spring Boot Auto Configuration works?
+What happens when application starts?
+@Transactional internals?
+Lazy vs Eager Fetch?
+Cascade Types?
+First-level and Second-level Cache?
+JPQL vs Native Query?
+Pagination and Sorting?
+Actuator?
+Profiles?
+
+
+Must-Revise Microservices Questions
+Why Microservices?
+Monolith vs Microservices?
+API Gateway?
+Service Discovery?
+Load Balancer?
+Feign Client?
+Circuit Breaker?
+Distributed Transaction?
+Saga Pattern?
+Event Driven Architecture?
+Kafka basics?
+Docker basics?
+Logging and Monitoring?
