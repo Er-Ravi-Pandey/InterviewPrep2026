@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 public class StreamDemo {
     public static void main(String[] args) {
         //feature introduced in java8
-        //process collection of data in a  functional and declarative manner
+        //process collection of data in a functional and declarative manner
         //Simplify Data Programming
 
 

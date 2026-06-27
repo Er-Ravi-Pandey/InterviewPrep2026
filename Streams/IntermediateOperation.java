@@ -65,9 +65,9 @@ public class IntermediateOperation {
                 Arrays.asList("D","E","F"),
                 Arrays.asList("G","H","I"));
         System.out.println(listOfLists.stream().flatMap(x->x.stream()).map(String::toLowerCase).collect(Collectors.toList()));
-       //first it flatten and then trasnform
+       //first it flatten and then transform
 
-        List<String> n=Arrays.asList("Helloworld","Java","Developer");
+        List<String> n=Arrays.asList("HelloWorld","Java","Developer");
 
        n.stream().flatMap(x-> Arrays.stream(x.split(""))).map(String::toUpperCase).forEach(System.out::print);
 

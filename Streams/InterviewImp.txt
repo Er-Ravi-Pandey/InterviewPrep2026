@@ -10,6 +10,7 @@ Supplier
 And:
 
 @FunctionalInterface
+
 2. Lambda Expressions
 
 Understand:
@@ -23,6 +24,7 @@ to reduce boilerplate anonymous class code.
 VERY IMPORTANT.
 
 Source → Intermediate → Terminal
+
 4. Intermediate Operations
 
 Must know:
@@ -33,6 +35,7 @@ flatMap
 distinct
 sorted
 limit
+
 5. Terminal Operations
 
 Must know:
@@ -43,6 +46,7 @@ reduce
 count
 findFirst
 anyMatch
+
 6. map vs flatMap
 
 VERY commonly asked.
@@ -57,6 +61,7 @@ Collectors.toList()
 Collectors.groupingBy()
 Collectors.mapping()
 Collectors.partitioningBy()
+
 8. Optional
 
 Must know:
@@ -69,6 +74,7 @@ orElseGet()
 Interviewers LOVE:
 
 orElse vs orElseGet
+
 9. Parallel Stream
 
 Basic understanding enough:
@@ -83,6 +89,18 @@ uses ForkJoinPool.
 
 Practice these repeatedly:
 
+//second largest element
+
+List<Integer> numbers = List.of(1, 2, 3, 4, 5);
+int secondLargest = numbers.stream()
+    .sorted(Comparator.reverseOrder())
+    .skip(1)
+    .findFirst()
+    .orElse(0);
+System.out.println("Second Largest: " + secondLargest);
+
+
+
 sort employees by salary
 second highest salary
 group employees by department
@@ -93,6 +111,18 @@ flatten nested lists
 even/odd partitioning
 max/min salary
 convert list to map
+
+
+Filter employees by salary
+Group by department
+Find duplicate elements
+Count frequency of words
+Sort objects
+Top N highest salaries
+Convert List to Map
+Partitioning vs GroupingBy
+
+5
 🔥 SUPER IMPORTANT Interview Understanding
 
 Streams:

@@ -10,7 +10,7 @@ public class TerminalOps {
 
 
         //forEach in order
-        list.parallelStream().forEachOrdered(x -> System.out.println(x));
+        list.parallelStream().forEachOrdered(System.out::println);
 
         //Terminal Operations are used to perform final operation on stream and return the result
         //1.Collectors.toList()
