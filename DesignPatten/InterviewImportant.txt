@@ -116,6 +116,7 @@ Partition tolerance
 Consistency Types
 strong consistency
 eventual consistency
+
 🔥 2. API & Communication
 
 VERY common for microservices interviews.
@@ -537,6 +538,78 @@ strong explanation + confidence + practical examples
 
 matters more than:
 
-ultra-advanced architecture theory
-🔥 One-line summary
-Service-based system design interviews mainly test whether you can design stable, scalable backend services using pra
+
+--------------------------------Level Up Preparation-----------------------------------
+
+For Amdocs (6–8 years experience), the system design level is generally moderate. They usually don't expect the depth you'd see at companies like Google, Amazon, or Uber, but they do expect you to design practical enterprise backend systems.
+
+What they typically expect
+1. Requirement gathering (5–10 minutes)
+
+They'll first see if you clarify requirements before jumping into the design.
+
+Example:
+
+Design a Notification Service.
+
+You should ask:
+
+Email, SMS, Push, or all?
+Expected traffic (requests/sec)?
+Is delivery guaranteed?
+Should messages be retried?
+How long should logs be stored?
+2. High-Level Design (most important)
+
+Be prepared to draw and explain components such as:
+
+API Gateway
+Load Balancer
+Microservices
+Database
+Cache (Redis)
+Message Queue (Kafka/RabbitMQ)
+Object Storage (if needed)
+Monitoring and Logging
+3. Database design
+
+They may ask:
+
+SQL vs NoSQL
+Entity relationships
+Indexing
+Partitioning (basic concepts)
+Read/write optimization
+4. Scalability basics
+
+They'll often ask:
+
+How would you handle 1 million users?
+How do you avoid a single point of failure?
+How do you make the service highly available?
+How would you improve response time?
+5. Production scenarios
+
+These are very common at Amdocs.
+
+Examples:
+
+Kafka is down. What happens?
+Database latency increases.
+One microservice becomes slow.
+Duplicate requests are coming in.
+A downstream service is unavailable.
+
+They want to see how you think through real-world backend problems.
+
+Designs you should definitely prepare
+URL Shortener
+Notification Service
+Parking Lot (LLD)
+BookMyShow
+Food Delivery System
+E-commerce Order Management
+Rate Limiter
+API Gateway
+Distributed Cache
+File Upload Service

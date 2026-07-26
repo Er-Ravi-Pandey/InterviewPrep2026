@@ -15,6 +15,10 @@ public class ArrayListPractice {
         System.out.println(list2.getClass().getName());
         list2.set(0,"R");
 
+
+
+
+        Collections.min(list2);
         Collections.sort(list2);
         System.out.println(list2);
         //change can't be added , only be updated
@@ -33,6 +37,7 @@ public class ArrayListPractice {
 
        //create List using List.of from java9
         List<String> list3 = List.of("Ravi","Saurabh");
+
         System.out.println(list3);
         //in this you can't modify the list , not add or remove.
 

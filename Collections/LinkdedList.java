@@ -19,7 +19,7 @@ public class LinkdedList {
 //
 //
 //    Memory overhead- LinkedList requires more memory than ArrayList because each node in a linkedlist required extra
-//    memory to store references to the next and prev noded.
+//    memory to store references to the next and prev node.
 
 
     public static void main(String[] args) {

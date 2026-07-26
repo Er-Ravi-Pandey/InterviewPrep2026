@@ -103,6 +103,7 @@ public class CopyOnWriteArrayListDemo {
         //
         //reads don’t block
         //system stays fast
+
         //🔴 Case 2: Frequent writes
         //
         //Example:

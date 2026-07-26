@@ -53,6 +53,8 @@ class Person{
 record Employee(int id,String name)
 extends Person{
 }Limitations
+
+
 1. Immutable
 
 Fields are final.
@@ -98,13 +100,15 @@ Q1. Why were Records introduced?
 
 Answer:
 
-To reduce boilerplate code for immutable data carrier classes by automatically generating constructors, accessors, equals(), hashCode(), and toString().
+To reduce boilerplate code for immutable data carrier classes by automatically generating constructors, accessors, equals(),
+hashCode(), and toString().
 
 Q2. Are Records immutable?
 
 Answer:
 
-Yes. Their components are final, so their references cannot be reassigned. However, if a component refers to a mutable object (like a List), that object can still be modified unless you make defensive copies.
+Yes. Their components are final, so their references cannot be reassigned. However,
+if a component refers to a mutable object (like a List), that object can still be modified unless you make defensive copies.
 
 Q3. Can Records extend another class?
 
@@ -118,12 +122,13 @@ Answer:
 
 Yes.
 
-    Q6. When would you use a Record instead of a POJO?
+
+ Q6. When would you use a Record instead of a POJO?
 
 Answer:
 
-Use a Record when the object's primary purpose is to carry immutable data, such as DTOs, API request/response models, configuration values,
-or value objects.
+Use a Record when the object's primary purpose is to carry immutable data, such as DTOs,
+API request/response models, configuration values, or value objects.
 Use a regular POJO when you need mutable state, inheritance, or richer business behavior
 
 

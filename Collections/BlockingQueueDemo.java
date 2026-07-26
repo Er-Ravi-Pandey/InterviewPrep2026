@@ -5,9 +5,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class BlockingQueueDemo {
 
-        //When we want to access queue without blocking them
-        //non blocking thread safe queue
-        //An implementation of the queue interface that supports lock-free, thread safe operations.
+
 
 
         //🔹 What is a BlockingQueue?

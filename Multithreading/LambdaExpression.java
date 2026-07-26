@@ -6,7 +6,9 @@ package com.DSA.Multithreading;
 // and executed by multiple threads at the same time without causing inconsistent results, data corruption, or unexpected behavior.
 public class LambdaExpression {
     public static void main(String[] args) {
-     //  Runnable run = () -> System.out.println("Hello World");
+      Runnable run = () -> System.out.println("Hello World");
+      Thread thread1 = new Thread(run);
+      thread1.run();
       //or
         Thread thread = new Thread(() -> System.out.println("Hello World"));
        thread.start();

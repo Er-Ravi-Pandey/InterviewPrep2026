@@ -7,7 +7,7 @@ import java.util.*;
 class ReverseString {
 	public static void main(String[] args)
 	{
-		String word = "Geeks For Geeks";
+		String word = "GeeksforGeeks";
 		String reverse;
 		char[] temp = word.toCharArray();
 		int left;

@@ -15,6 +15,8 @@ public class CollectorsDemo {
 
         //2.Collecting to a Set
         List<String> names1= Arrays.asList("Ravi","Saurabh","Ravi","Saurabh");
+
+        names1.stream().collect(Collectors.groupingBy(x->x,Collectors.counting())).forEach((k,v)-> System.out.println(k + " " + v));
         Set<String> list1= names1.stream().collect(Collectors.toSet());
         System.out.println(list1);
 

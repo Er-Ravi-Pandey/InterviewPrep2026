@@ -9,7 +9,7 @@ class Paper {
 
 public class DeadlockDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Pen pen = new Pen();
         Paper paper = new Paper();
@@ -52,5 +52,7 @@ public class DeadlockDemo {
 
         t1.start();
         t2.start();
+
+
     }
 }

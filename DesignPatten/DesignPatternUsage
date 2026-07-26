@@ -1,0 +1,39 @@
+When to Use Which Design Pattern
+
+
+Creational Patterns (If the problem is related to Object Creation)
+
+Design Pattern	Purpose
+
+Singleton	Makes sure there is just one instance.
+Factory Method	Assigns subclasses the task of instantiating objects.
+Abstract Factory	Constructs related object families without defining their concrete classes.
+Prototype	Clones objects to provide a template example.
+Builder	Helps in building complex objects step by step.
+
+
+Structural Patterns (If the problem is related to Object Assembly)
+
+Design Pattern	Purpose
+Adapter	Acts as a bridge between two incompatible interfaces.
+Bridge	Separates the abstraction from the implementation.
+Composite	Handles single and composite objects equally.
+Decorator	Adds behaviors to objects dynamically.
+Facade	Helps in simplifying complex system interfaces.
+Flyweight	Shares common parts of state between multiple objects to reduce memory.
+Proxy	Controls access to an object.
+
+
+Behavioral Patterns (If the problem is related to Object Interactions)
+
+Design Pattern	Purpose
+Observer	Observes and notifies changes in multiple objects.
+Strategy	Encapsulates interchangeable algorithms.
+Command	Encapsulates requests as objects for decoupled execution.
+State	Changes the behavior of an object based on its internal state.
+Visitor	Separates algorithms from objects.
+Memento	Manages object state and restoration.
+Iterator	Sequentially accesses the elements of a collection.
+Mediator	Central controller managing communication between objects.
+Chain of Responsibility	Passes a request through handlers until one handles it.
+Template Method	Defines the skeleton of an algorithm.

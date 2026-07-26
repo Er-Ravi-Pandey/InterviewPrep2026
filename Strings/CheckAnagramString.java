@@ -17,7 +17,7 @@ public class CheckAnagramString {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
 
-        for (Character c : s1.toCharArray()) {
+        for (Character c : s2.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) - 1);
         }
 
@@ -33,7 +33,7 @@ public class CheckAnagramString {
     public static void main(String[] args) {
 
         CheckAnagramString checkAnagramString = new CheckAnagramString();
-        System.out.println(checkAnagramString.checkAnagram("ravi", "ravii"));
+        System.out.println(checkAnagramString.checkAnagram("ravi", "ivar"));
     }
 
 

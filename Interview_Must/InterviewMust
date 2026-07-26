@@ -1,0 +1,428 @@
+Core Java
+
+Why is HashMap not thread-safe?
+Difference between ConcurrentHashMap and HashMap.
+How does HashMap work internally?
+volatile vs synchronized.
+Why use ExecutorService?
+Streams API and when not to use streams.
+
+Spring Boot
+
+Bean lifecycle.
+@Component vs @Service vs @Repository.
+How auto-configuration works.
+Exception handling.
+Transaction management.
+
+Spring Security
+
+Explain the JWT authentication flow end to end.
+Why do we use a JWT filter?
+What happens if a JWT expires?
+Authentication vs Authorization.
+Stateless sessions.
+
+Microservices
+
+Service discovery.
+API Gateway.
+Circuit Breaker.
+Distributed transactions.
+Communication between services.
+Logging and tracing.
+
+SQL
+
+Joins.
+Indexes.
+Query optimization.
+Group By, Having.
+Normalization.
+They also like scenario-based questions, for example:
+"Your API suddenly starts responding in 8 seconds. How will you debug it?"
+"How would you secure a microservice?"
+"One service is down. How will your system behave?"
+"How would you handle 10,000 concurrent users?"
+"How do you avoid duplicate records in a distributed system?"
+
+
+1. Project Discussion (Very High Probability)
+
+This usually takes the first 5–10 minutes.
+
+Questions like:
+
+Explain your current project.
+What is your role in the team?
+What features have you developed?
+Describe the complete request flow.
+What challenges did you face?
+What production issues have you resolved?
+How many users does your application serve?
+How is the application deployed?
+What improvements have you introduced?
+
+Since you have worked on authentication and microservices, expect detailed follow-up questions.
+
+2. Core Java (Very High Probability)
+
+Frequently asked questions include:
+
+Explain the internal working of HashMap.
+Why is HashMap not thread-safe?
+Difference between HashMap, ConcurrentHashMap, and Hashtable.
+How does ConcurrentHashMap avoid locking the entire map?
+Difference between ArrayList and LinkedList.
+equals() vs hashCode().
+String, StringBuilder, StringBuffer.
+Functional Interface.
+Lambda expressions.
+Streams API.
+Optional.
+Exception handling.
+volatile vs synchronized.
+ExecutorService.
+Thread Pool.
+CompletableFuture.
+Garbage Collection.
+JVM Memory.
+
+3. Spring Boot (Almost Certain)
+
+Typical questions:
+
+Explain Spring Boot architecture.
+How does Auto Configuration work?
+Bean lifecycle.
+@Component vs @Service vs @Repository.
+Dependency Injection.
+Bean scopes.
+REST API best practices.
+Global Exception Handling.
+Validation.
+Spring Profiles.
+Configuration properties.
+Spring Boot starters.
+
+4. Spring Security & JWT (Very High Probability)
+
+Since many companies use JWT, questions often include:
+
+Explain Authentication vs Authorization.
+Complete JWT authentication flow.
+Why use JWT?
+Stateless authentication.
+JWT Filter.
+SecurityContextHolder.
+OncePerRequestFilter.
+Password encoding.
+Role-based authorization.
+Refresh Token.
+Token expiration.
+CSRF.
+CORS.
+
+5. Microservices (Very High Probability)
+
+Questions such as:
+
+Why Microservices?
+Monolith vs Microservices.
+Service Discovery.
+API Gateway.
+Circuit Breaker.
+Feign Client.
+Config Server.
+Distributed Transactions.
+Event-driven architecture.
+Kafka basics.
+Communication between services.
+Logging.
+Tracing.
+Monitoring.
+
+6. SQL (High Probability)
+
+Expect:
+
+Joins.
+Indexes.
+Clustered vs Non-clustered Index.
+Primary vs Unique Key.
+Group By.
+Having.
+Window Functions.
+Query optimization.
+Explain execution plan.
+
+Sometimes they ask you to write SQL during the interview.
+
+7. REST API
+
+Questions include:
+
+PUT vs PATCH.
+GET vs POST.
+Idempotency.
+HTTP Status Codes.
+Pagination.
+API Versioning.
+Exception handling.
+
+8. Design Patterns
+
+Common ones:
+
+Singleton.
+Factory.
+Builder.
+Strategy.
+Observer.
+Dependency Injection pattern.
+
+9. Scenario-Based Questions (Very Common)
+
+Examples:
+
+API response time suddenly increased from 200 ms to 8 seconds. How will you investigate?
+Memory usage is continuously increasing. What could be happening?
+Duplicate records are getting inserted. How will you fix it?
+One microservice is down. What should happen?
+Database is slow. How will you debug it?
+Thousands of users are accessing the application simultaneously. How will you scale it?
+
+These questions assess practical thinking rather than memorization.
+
+10. Coding
+
+
+
+Possible questions:
+
+Reverse a string.
+Find duplicates.
+First non-repeating character.
+Count frequency.
+Java Streams-based coding.
+SQL query writing.
+Small debugging exercise.
+Reverse String
+Remove Duplicate Elements
+Frequency Count
+First Non-Repeated Character
+Two Sum
+Palindrome
+Sorting using Comparator
+Anagram
+Common Prefix
+FlatMap , Nested List
+
+
+API Gateway
+Eureka
+Config Server
+Circuit Breaker
+Feign Client
+Load Balancer
+Distributed Transaction (basic)
+Communication
+RestTemplate
+WebClient
+Feign
+
+
+Joins
+Group By
+Having
+Window Functions (ROW_NUMBER basics)
+Index
+Primary Key
+Foreign Key
+Normalization
+ACID
+
+
+
+Cross-Site Scripting (XSS) & CSRF Protection:
+Enabled CSRF protection for stateful endpoints.
+Sanitized inputs to prevent XSS attacks in REST responses.
+http.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+
+ CORS Configuration:
+Configured CORS for frontend-backend integration, allowing only trusted domains.
+@Bean
+public WebMvcConfigurer corsConfigurer() {
+    return new WebMvcConfigurer() {
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+            registry.addMapping("/**").allowedOrigins("https://trustedclient.com");
+        }
+    };
+}
+
+---------------------------------------------------------------------------------------
+
+Types of Dependency Injection:
+Spring supports three main types of dependency injection:
+
+1. Constructor Injection:
+
+Dependencies are provided via class constructor.
+Recommended for mandatory dependencies and immutability.
+@Component
+class Car {
+    private final Engine engine;
+
+    @Autowired
+    public Car(Engine engine) {
+        this.engine = engine;
+    }
+    public void start() { engine.start(); }
+}
+Pros:
+
+Ensures required dependencies are not null.
+Makes class immutable.
+Easier for unit testing.
+
+2. Setter Injection:
+
+Dependencies are injected via setter methods.
+Useful for optional dependencies.
+@Component
+class Car {
+    private Engine engine;
+
+    @Autowired
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+    public void start() { engine.start(); }
+}
+Pros:
+
+Allows optional dependencies.
+Can change dependencies at runtime if needed.
+
+3. Field Injection:
+
+Dependencies are injected directly into fields using @Autowired.
+@Component
+class Car {
+    @Autowired
+    private Engine engine;
+
+    public void start()
+    {
+      engine.start();
+    }
+}
+Pros:
+
+Quick and concise.
+Cons:
+
+Harder to unit test.
+Not recommended for mandatory dependencies.
+
+
+------------------------------------------------------------------
+
+ How does Spring Boot manage transactions?
+In Spring Boot, transaction management ensures data consistency and integrity — meaning all database operations within a transaction either complete successfully (commit) or roll back completely if any error occurs.
+
+Spring Boot provides declarative transaction management using the
+@Transactional annotation, built on top of Spring’s transaction abstraction layer.
+
+Transaction:
+A transaction is a set of database operations that must all succeed or fail together.
+For example, in a banking application:
+
+You debit ₹1000 from Account A
+You credit ₹1000 to Account B
+If the credit fails after the debit, data becomes inconsistent — hence both operations should roll back.
+
+How Spring Boot Handles It:
+Spring Boot automatically configures transaction management when you use spring-boot-starter-data-jpa or other data starters.
+
+Internally:
+
+Spring uses AOP (Aspect-Oriented Programming) proxies around methods annotated with @Transactional.
+When a method is called:
+A transaction begins.
+The method executes.
+If successful → transaction commits.
+If an exception occurs → transaction rolls back.
+Example — Declarative Transaction Management:
+@Service
+public class BankService {
+
+@Autowired
+    private AccountRepository accountRepository;
+    @Transactional
+    public void transferMoney(Long fromAccountId, Long toAccountId, double amount) {
+        Account from = accountRepository.findById(fromAccountId).orElseThrow();
+        Account to = accountRepository.findById(toAccountId).orElseThrow();
+        from.setBalance(from.getBalance() - amount);
+        to.setBalance(to.getBalance() + amount);
+        accountRepository.save(from);
+        accountRepository.save(to);
+        // Simulate exception to test rollback
+        if (amount > 1000) {
+            throw new RuntimeException("Transfer limit exceeded!");
+        }
+    }
+}
+If everything works → transaction commits.
+If exception occurs → rollback happens automatically.
+Transaction Propagation and Isolation Levels:
+You can fine-tune transaction behavior using @Transactional attributes.
+
+@Transactional(
+    propagation = Propagation.REQUIRED,
+    isolation = Isolation.READ_COMMITTED,
+    rollbackFor = Exception.class
+)
+Propagation:
+
+Defines how transactions behave when calling another transactional method.
+
+REQUIRED: Join existing transaction or create new if none exists
+REQUIRES_NEW: Always start a new transaction
+MANDATORY: Must run inside an existing transaction
+SUPPORTS: Run with or without transaction
+NEVER: Must not run inside a transaction
+NESTED: Creates nested transaction
+Isolation Levels:
+
+Define how transaction handles concurrent access.
+
+READ_UNCOMMITTED: Allows dirty reads
+READ_COMMITTED: Prevents dirty reads
+REPEATABLE_READ: Prevents non-repeatable reads
+SERIALIZABLE: Strictest, ensures full consistency
+Programmatic Transaction Management (Optional):
+Though rarely needed, you can also manage transactions manually using PlatformTransactionManager.
+
+@Autowired
+private PlatformTransactionManager transactionManager;
+
+public void updateData() {
+    TransactionStatus status = transactionManager.getTransaction(new DefaultTransactionDefinition());
+    try {
+        // your database logic
+        transactionManager.commit(status);
+    } catch (Exception e) {
+        transactionManager.rollback(status);
+    }
+}
+Rollback Rules:
+By default, Spring rolls back only on unchecked exceptions (RuntimeException and Error), not on checked exceptions (Exception).
+
+You can override this using:
+
+@Transactional(rollbackFor = Exception.class)
+
+What is the difference between class-level @Transactional vs method-level @Transactional in Spring?
+

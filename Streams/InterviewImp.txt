@@ -85,11 +85,13 @@ Know:
 
 multithreading internally,
 uses ForkJoinPool.
+
+
 🔥 MOST ASKED Coding Questions
 
 Practice these repeatedly:
 
-//second largest element
+1.second largest element
 
 List<Integer> numbers = List.of(1, 2, 3, 4, 5);
 int secondLargest = numbers.stream()
@@ -101,28 +103,113 @@ System.out.println("Second Largest: " + secondLargest);
 
 
 
-sort employees by salary
-second highest salary
-group employees by department
-count frequency of chars
-remove duplicates
-first non-repeating char
-flatten nested lists
-even/odd partitioning
-max/min salary
-convert list to map
+2.sort employees by salary
+emp.stream()
+    .sorted(Comparator.comparing(Employee::getSalary).reversed())
+    .collect(Collectors.toList());
+
+3.second highest salary
+emp.stream()
+    .sorted(Comparator.comparing(Employee::getSalary).reversed())
+    .skip(1).
+    .findFirst()
+    .collect(Collectors.toList());
+
+4.group employees by department
+emp.stream()
+    .collect(Collectors.groupingBy(Employee::getDepartment));
+
+5.count frequency of chars //imp
+list.stream()
+    .flatMapToInt(String::chars)
+    .mapToObj(c -> (char) c)
+    .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
 
-Filter employees by salary
-Group by department
-Find duplicate elements
-Count frequency of words
-Sort objects
-Top N highest salaries
+6.remove duplicates
+list.stream()
+    .distinct()
+    .collect(Collectors.toList());
+
+7.first non-repeating char //Imp
+
+list.stream.
+    flatMapToInt(String::chars)
+    .mapToObj(c -> (char) c)
+    .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+    .entrySet()
+    .stream()
+    .filter(entry -> entry.getValue() == 1)
+    .map(Map.Entry::getKey)
+    .findFirst()
+    .orElse(null);
+
+
+8.flatten nested lists
+list.stream()
+    .flatMap(Collection::stream)
+    .collect(Collectors.toList());
+
+9.even/odd partitioning
+list.stream()
+    .collect(Collectors.partitioningBy(num -> num % 2 == 0));
+
+
+10.max/min salary
+list.stream()
+    .max(Comparator.comparing(Employee::getSalary))
+    .orElse(null);
+
+list.stream()
+    .min(Comparator.comparing(Employee::getSalary))
+    .orElse(null);
+
+
+11.convert list to map
+list.stream()
+    .collect(Collectors.toMap(Employee::getId, Function.identity()));
+
+12.Filter employees by salary
+list.stream()
+    .filter(emp -> emp.getSalary() > 50000)
+    .collect(Collectors.toList());
+
+13.Group by department
+list.stream()
+    .collect(Collectors.groupingBy(Employee::getDepartment));
+
+14.Find duplicate elements //imp
+list.stream()
+    .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+    .entrySet()
+    .stream()
+    .filter(entry -> entry.getValue() > 1)
+    .map(Map.Entry::getKey)
+    .collect(Collectors.toList());
+
+
+
+15.Count frequency of words
+list.stream()
+    .collect(Collectors.groupingBy(x->x, Collectors.counting()));
+
+16.Sort objects
+list.stream()
+    .sorted(Comparator.comparing(Employee::getSalary))
+    .collect(Collectors.toList());
+
+
+17.Top N highest salaries
+list.stream()
+    .sorted(Comparator.comparing(Employee::getSalary).reversed())
+    .limit(N)
+    .collect(Collectors.toList());
+
+
 Convert List to Map
 Partitioning vs GroupingBy
 
-5
+
 🔥 SUPER IMPORTANT Interview Understanding
 
 Streams:
@@ -143,6 +230,7 @@ mutable	functional style
 Answer:
 
 to perform declarative, concise, functional-style data processing
+
 🔥 Most Important Concept Today
 
 If you deeply understand:
@@ -150,6 +238,9 @@ If you deeply understand:
 filter + map + collect
 
 half of Java 8 interview coding becomes easy.
+
+
+
 
 🔥 Suggested Flow Today
 Lambda

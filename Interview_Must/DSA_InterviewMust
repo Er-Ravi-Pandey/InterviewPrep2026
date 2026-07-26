@@ -1,0 +1,60 @@
+1. Strings (Very Common)
+Reverse a string
+Check palindrome
+First non-repeating character
+Longest substring without repeating characters
+Remove duplicate characters
+Character frequency using HashMap
+Anagram check
+
+Example:
+
+Input: "aabbccddeef"
+Output: f
+2. Arrays
+Two Sum
+Move zeros to end
+Rotate array
+Merge two sorted arrays
+Find missing number
+Second largest element
+Kadane's Algorithm
+Stock Buy & Sell
+3. HashMap / HashSet
+
+These are asked very frequently.
+
+Examples:
+
+Count frequency
+Find duplicates
+Group Anagrams
+Intersection of arrays
+First unique character
+4. Linked List
+
+You should know:
+
+Reverse Linked List
+Detect Loop (Floyd's Cycle)
+Find Middle Node
+Merge Sorted Lists
+Remove Nth Node from End
+5. Stack & Queue
+
+Examples:
+
+Valid Parentheses ⭐⭐⭐⭐⭐ (very common)
+Min Stack
+Next Greater Element
+Implement Queue using Stack
+Implement Stack using Queue
+6. Binary Tree
+
+Usually one basic tree problem:
+
+Tree Traversal
+Height of Tree
+Balanced Tree
+Lowest Common Ancestor
+Level Order Traversal

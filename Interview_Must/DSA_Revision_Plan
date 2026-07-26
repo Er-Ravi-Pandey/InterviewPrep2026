@@ -1,38 +1,38 @@
 Day 1 – Arrays (Basics)
-Array Reverse
-Missing Number
-Move Zeros to End
-Second Max & Third Max
-Check Sorted Array
-Left Rotate by 1
-Left Rotate by D
-Remove Duplicates from Array
-Merge 2 Sorted Arrays
+Array Reverse ✅
+Missing Number ✅
+Move Zeros to End ✅
+Second Max & Third Max ✅
+Check Sorted Array ✅
+Left Rotate by 1 ✅
+Left Rotate by D ✅
+Remove Duplicates from Array ✅
+Merge 2 Sorted Arrays ✅
 
 Focus: Two pointers, basic traversal.
 
 Day 2 – Arrays (Medium)
-Sort 0s,1s,2s
-Square of Sorted Array
-Union of 2 Sorted Arrays
-Intersection of 2 Sorted Arrays
-Kadane's Algorithm
-Stock Buy & Sell
-Leaders in Array
-Rearrange Positive & Negative
-Rearrange Min & Max
+Sort 0s,1s,2s ✅
+Square of Sorted Array ✅
+Union of 2 Sorted Arrays ✅
+Intersection of 2 Sorted Arrays ✅
+Kadane's Algorithm ✅
+Stock Buy & Sell ✅
+Leaders in Array ✅
+Rearrange Positive & Negative ✅
+Rearrange Min & Max ✅
 
 Focus: Pattern recognition.
 
 Day 3 – Arrays (Interview Favorites)
-Two Sum
-Three Sum
+Two Sum ✅
+Three Sum ✅
 Next Permutation
 Longest Consecutive Subsequence
-Set Matrix Zero
-Rotate Matrix by 90°
-Transpose Matrix
-Spiral Matrix
+Set Matrix Zero ✅
+Rotate Matrix by 90° ✅
+Transpose Matrix ✅
+Spiral Matrix ✅
 
 Focus: Questions most likely to be asked.
 

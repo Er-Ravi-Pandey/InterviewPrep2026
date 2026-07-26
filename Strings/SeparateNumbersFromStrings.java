@@ -9,6 +9,7 @@ public class SeparateNumbersFromStrings {
         public static void main(String[] args) {
             String input = "abc38gh89";
 
+
             // Regular expression to match numbers
             //String[] numbers = input.split("\\D+"); // Splits on non-digit characters
 

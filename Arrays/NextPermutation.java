@@ -50,7 +50,7 @@ public class NextPermutation {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 0,1,9,3};
+        int[] arr = { 0,3,9,1};
         nextPermutation(arr);
 
         for(int i = 0; i < arr.length; i++)

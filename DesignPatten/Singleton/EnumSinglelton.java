@@ -7,6 +7,7 @@ public enum EnumSinglelton {
     public static void main(String[] args) {
 
 
+
         EnumSinglelton instance = EnumSinglelton.INSTANCE;
         EnumSinglelton instance2 = EnumSinglelton.INSTANCE;
         System.out.println(instance.hashCode());
